@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { scoreRoll, scoretot} from './yams.js'
+import { scoreRoll, scoretot, scoreuni } from './yams.js'
 
 describe('figures', () => {
   it('chance', () => {
@@ -33,7 +33,7 @@ describe('figures', () => {
   })
 })
 
-describe('scoretot', () => {
+describe('score total', () => {
   it('additionne les scores de chaque lancer', () => {
     const rolls = [
       [3,3,3,4,4],
@@ -41,5 +41,27 @@ describe('scoretot', () => {
       [1,1,2,3,6]
     ]
     expect(scoretot(rolls)).toBe(30 + 35 + 13)
+  })
+})
+
+describe('score unique', () => {
+  it('consomme chaque figure au plus une fois', () => {
+    const rolls = [
+      [3,3,3,4,4],
+      [3,3,3,4,4],
+      [3,3,3,4,4]
+    ]
+    expect(scoreuni(rolls)).toBe(30 + 28 + 17)
+  })
+  it('prend la meilleure dispo puis passe à la suivante', () => {
+    const rolls = [
+      [6,6,6,6,6],
+      [2,3,4,5,6],
+      [2,2,2,2,3],
+      [3,3,3,4,4],
+      [5,5,5,1,2],
+      [6,1,2,3,4]
+    ]
+    expect(scoreuni(rolls)).toBe(50 + 40 + 35 + 30 + 28 + 16)
   })
 })
