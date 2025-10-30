@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { scoreRoll, scoreAll, scoreAllUnique } from './yams.js'
+import { scoreRoll} from './yams.js'
 
 describe('figures', () => {
   it('chance', () => {
