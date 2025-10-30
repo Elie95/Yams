@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "vitest": "^4.0.5"
+  },
+  "name": "yams",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elie95/Yams.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elie95/Yams/issues"
+  },
+  "homepage": "https://github.com/Elie95/Yams#readme",
+  "description": ""
+}
