@@ -44,3 +44,11 @@ export const scoreRoll = r => {
   cand.push(sum(r))
   return Math.max(...cand)
 }
+
+export const scoretot = rolls => {
+  let total = 0
+  for (const r of rolls) {
+    total += scoreRoll(r)
+  }
+  return total
+}
